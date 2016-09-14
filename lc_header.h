@@ -2,12 +2,14 @@
 #define _LC_HEADER_H_
 
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <array>
 #include <unordered_set>
 #include <unordered_map>
 #include <map>
+#include <set>
 #include <queue>
 #include <algorithm>
 #include <cmath>
