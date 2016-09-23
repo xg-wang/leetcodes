@@ -11,6 +11,7 @@
 #include <map>
 #include <set>
 #include <queue>
+#include <tuple>
 #include <algorithm>
 #include <cmath>
 #include <cassert>
@@ -27,5 +28,14 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+
+template<typename T>
+void print_array(std::vector<T> vec, std::string prefix="") {
+    std::cout << prefix;
+    for (size_t i = 0; i < vec.size()-1; i++) {
+        std::cout << vec[i] << ", "; 
+    }
+    std::cout << vec.back() << std::endl;
+}
 
 #endif
