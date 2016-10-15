@@ -7,8 +7,8 @@ class Solution {
 public:
     int hammingWeight(uint32_t n) {
         int res;
-        while(n){
-            if(n & 1 == 1){
+        while (n){
+            if ((n & 1) == 1){
                 res++;
             }
             n >>= 1;

@@ -21,7 +21,7 @@ public:
         if (s_map.size() != t_map.size()) {
             return false;
         } else {
-            for(const auto &ch_pair: s_map) {
+            for (const auto &ch_pair: s_map) {
                 if (ch_pair.second != t_map[ch_pair.first]) {
                     return false;
                 }

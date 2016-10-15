@@ -12,8 +12,10 @@
 #include <set>
 #include <stack>
 #include <queue>
+#include <deque>
 #include <tuple>
 #include <algorithm>
+#include <numeric>
 #include <cmath>
 #include <cassert>
 
@@ -30,13 +32,18 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-template<typename T>
-void print_array(std::vector<T> vec, std::string prefix="") {
+struct UndirectedGraphNode {
+    int label;
+    std::vector<UndirectedGraphNode *> neighbors;
+    UndirectedGraphNode(int x) : label(x) {};
+};
+
+void print_array(std::vector<int> vec, std::string prefix="") {
     std::cout << prefix;
     for (size_t i = 0; i < vec.size()-1; i++) {
         std::cout << vec[i] << ", "; 
     }
     std::cout << vec.back() << std::endl;
 }
-
+ 
 #endif

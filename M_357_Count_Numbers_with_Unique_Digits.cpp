@@ -5,7 +5,7 @@ class Solution {
 public:
     int countNumbersWithUniqueDigits(int n) {
         int result = 0;
-        for(int num = 0; num < n; num++) {
+        for (int num = 0; num < n; num++) {
             vector<int> digits(num + 1);
             for (int pos = 0; pos < num; pos++) {
                 for (int i = 0; i < 10; i++) {
