@@ -44,6 +44,27 @@ using namespace std;
 class Solution {
 public:
     int lengthLongestPath(string input) {
+        int max_len = 0;
+        stringstream ss(input);
+        string item;
+        char delim = '\n';
+        stack<int> base_lens;
+        base_lens.push(0);
+        while (getline(ss, item, delim)) {
+            int level = item.rfind('\t');
+            while (base_lens.size() > level+2) {
+                base_lens.pop();
+            }
+            int curr_len = base_lens.top() + item.size() - level - 1;
+            if (item.rfind('.') == string::npos) {  // dir
+                base_lens.push(curr_len+1);
+            } else {  // file
+                max_len = max(max_len, curr_len);
+            }
+        }
+        return max_len;
+    }
+    int lengthLongestPath2(string input) {
         int longest_len = 0;
         stringstream ss(input);
         string item;
