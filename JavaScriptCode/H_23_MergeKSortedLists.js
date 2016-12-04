@@ -22,7 +22,6 @@ var mergeKLists = function(lists) {
         currNode = currNode.next;
         if (node.next) q.push(node.next);
     }
-
     return result;
 };
 
